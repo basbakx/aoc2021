@@ -3,7 +3,7 @@ y = 0
 window = 0
 lastWindow = 0
 
-with open('/Users/bas/AoC/day1/input.txt') as file:
+with open('/Users/bas/aoc2021/day1/input.txt') as file:
     lines = [int(x) for x in file.read().split()]
 
 for i, val in enumerate(lines):
