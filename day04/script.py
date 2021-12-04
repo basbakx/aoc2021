@@ -53,6 +53,7 @@ for i in nums:
 
 # Solve 2
 y = 0
+numlist2 = []
 
 
 def recur(numlist):
@@ -62,7 +63,6 @@ def recur(numlist):
         recur(numlist)
 
 
-numlist2 = []
 for i in nums:
     numlist2.append(int(i))
     result = check(numlist2)
