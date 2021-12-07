@@ -20,6 +20,17 @@ for i in crabPos:
     dif = abs(i - meanPos)
     y += int(((dif**2)+dif)/(2))
 
+# Brute force part 2 lol
+# results = []
+# for j in range(len(crabPos)):
+#     v = 0
+#     for i in crabPos:
+#         dif = abs(i - j)
+#         v += round(((dif**2)+dif)/(2))
+#     results.append(v)
+# y = min(results)
+# print('index', results.index(y))
+
 
 print("Answer 1:", x)
 print("Answer 2:", y)
