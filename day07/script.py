@@ -14,7 +14,6 @@ for i in crabPos: x += abs(medianPos - i)
 
 # Solve part 2
 meanPos = int(np.average(crabPos))
-print(meanPos)
 y = 0
 for i in crabPos:
     dif = abs(i - meanPos)
@@ -26,10 +25,9 @@ for i in crabPos:
 #     v = 0
 #     for i in crabPos:
 #         dif = abs(i - j)
-#         v += round(((dif**2)+dif)/(2))
+#         v += int(((dif**2)+dif)/(2))
 #     results.append(v)
 # y = min(results)
-# print('index', results.index(y))
 
 
 print("Answer 1:", x)
