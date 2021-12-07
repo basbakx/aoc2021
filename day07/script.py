@@ -14,6 +14,7 @@ for i in crabPos: x += abs(medianPos - i)
 
 # Solve part 2
 meanPos = int(np.average(crabPos))
+
 y = 0
 for i in crabPos:
     dif = abs(i - meanPos)
