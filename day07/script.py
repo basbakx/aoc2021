@@ -9,6 +9,7 @@ for i in f: crabPos = list(map(int, i.split(',')))
 # Solve part 1
 medianPos = int(np.median(crabPos))
 x = 0
+
 for i in crabPos: x += abs(medianPos - i)
 
 
