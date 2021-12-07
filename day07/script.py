@@ -1,8 +1,5 @@
 import numpy as np
 f = open('/Users/bas/aoc2021/day07/input.txt', 'r')
-
-
-# Crabpos
 for i in f: crabPos = list(map(int, i.split(',')))
 
 
@@ -15,8 +12,8 @@ for i in crabPos: x += abs(medianPos - i)
 
 # Solve part 2
 meanPos = int(np.average(crabPos))
-
 y = 0
+
 for i in crabPos:
     dif = abs(i - meanPos)
     y += int(((dif**2)+dif)/(2))
