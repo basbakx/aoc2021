@@ -47,7 +47,6 @@ def search():
     for j in rl:
         if j not in newList:
             newList.append(j)
-            # print(j)
         for k in tries:
             r = hei(k[0], k[1], j)
             if r in range(0,9) and [j[0] + k[0], j[1] + k[1]] not in newList:
