@@ -31,6 +31,7 @@ x = 0
 xs = [3, 57, 1197, 25137]
 for i in err: x += xs[cl.index(i)]
 
+
 # Solve 2
 yl = []
 for i in inc:
