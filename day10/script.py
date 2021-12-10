@@ -33,7 +33,6 @@ for i in err: x += xs[cl.index(i)]
 
 # Solve 2
 yl = []
-inc.reverse()
 for i in inc:
     i.reverse()
     s = 0
