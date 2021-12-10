@@ -5,14 +5,14 @@ for val in f: l.append(list(val))
 
 
 # Check lines
-op = ('<', '{', '[', '(')
-cl = ('>', '}', ']', ')')
+op = ('(', '[', '{', '<')
+cl = (')', ']', '}', '>')
 err = []
 inc = []
 
 for i in l:
     cur = []
-    for c, j in enumerate(i):
+    for j in i:
         if j in op:
             cur.append(j)
         elif j in cl:
@@ -28,24 +28,16 @@ for i in l:
 
 # Solve 1
 x = 0
-for i in err:
-    if i == ')': x += 3
-    if i == ']': x += 57
-    if i == '}': x += 1197
-    if i == '>': x += 25137
-
+xs = [3, 57, 1197, 25137]
+for i in err: x += xs[cl.index(i)]
 
 # Solve 2
 yl = []
+inc.reverse()
 for i in inc:
     i.reverse()
     s = 0
-    for j in i:
-        s *= 5
-        if j == '(': s += 1
-        if j == '[': s += 2
-        if j == '{': s += 3
-        if j == '<': s += 4
+    for j in i: s = s * 5 + op.index(j) + 1
     yl.append(s)
 
 yl = sorted(yl)
