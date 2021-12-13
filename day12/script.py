@@ -13,6 +13,7 @@ for val in f:
     else:
         map[val[0]] = []
         map[val[0]].append(val[1])
+        
     if val[1] in map:
         if val[0] not in map[val[1]]:
             map[val[1]].append(val[0])
@@ -49,6 +50,7 @@ def run(list):
                 elif opt != 'start' and path[0] == 'start':
                     res2.append(['d']+path+ [opt])
     return res2
+
 
 # Solve 1 and 2
 while len(res) > 0:
