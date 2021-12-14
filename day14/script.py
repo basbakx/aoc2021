@@ -54,7 +54,7 @@ def solve():
         if val[0] in res: 
             res[val[0]] += pairs[val]
         else: 
-            sres[val[0]] = pairs[val]
+            res[val[0]] = pairs[val]
 
     res = res.values()
     return max(res) - min(res)
