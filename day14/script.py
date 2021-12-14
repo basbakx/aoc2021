@@ -30,18 +30,14 @@ def step(pairs):
     nPairs = {}
 
     def add(val, count):
-        if val in nPairs:
-            nPairs[val] += count
-        else:   
-            nPairs[val] = count
+        if val in nPairs: nPairs[val] += count
+        else: nPairs[val] = count
 
     for v in pairs:
         count = pairs[v]
         if v in d:
-            first = v[0] + d[v]
-            second = d[v] + v[1]
-            add(first, count)
-            add(second, count)
+            add(v[0] + d[v], count)
+            add(d[v] + v[1], count)
         else:
             add(v, count)
 
@@ -50,19 +46,14 @@ def step(pairs):
 
 # Solve function
 def solve():
-    xl = 0
     res = {}
+
     for val in pairs:
-        xl += pairs[val]
-        if val[0] in res:
-            res[val[0]] += pairs[val]
-        else:
-            res[val[0]] = pairs[val]
+        if val[0] in res: res[val[0]] += pairs[val]
+        else: res[val[0]] = pairs[val]
 
     res = res.values()
-    x = max(res) - min(res)
-
-    return x
+    return max(res) - min(res)
 
 
 # Solve 1
