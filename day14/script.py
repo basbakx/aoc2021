@@ -18,9 +18,9 @@ pairs = {}
 
 for i in range(len(p) - 1):
     pair = p[i] + p[i + 1]
-    if pair in pairs:
+    if pair in pairs: 
         pairs[pair] += 1
-    else:
+    else: 
         pairs[pair] = 1
 pairs[p[-1]] = 1
 
@@ -30,8 +30,10 @@ def step(pairs):
     nPairs = {}
 
     def add(val, count):
-        if val in nPairs: nPairs[val] += count
-        else: nPairs[val] = count
+        if val in nPairs: 
+            nPairs[val] += count
+        else: 
+            nPairs[val] = count
 
     for v in pairs:
         count = pairs[v]
@@ -49,8 +51,10 @@ def solve():
     res = {}
 
     for val in pairs:
-        if val[0] in res: res[val[0]] += pairs[val]
-        else: res[val[0]] = pairs[val]
+        if val[0] in res: 
+            res[val[0]] += pairs[val]
+        else: 
+            res[val[0]] = pairs[val]
 
     res = res.values()
     return max(res) - min(res)
